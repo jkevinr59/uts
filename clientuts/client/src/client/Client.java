@@ -51,17 +51,7 @@ public class Client {
 
             os.write(kak.getBytes());
             os.flush();
-           
-            while(true) {
-            buf = new byte[10];
-            len = is.read(buf);
-            if(len == -1) {
-                break;
-            }
-                
-                System.out.print(new String(buf));
-            }
-//            
+          
             os.close();
             is.close();
             socket.close();
