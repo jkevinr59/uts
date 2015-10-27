@@ -36,8 +36,9 @@ public class Client {
             int len;
             String strbuf = new String(buf);
             while(true) {
-                buf = new byte[30];
+                buf = new byte[3];
                 len = is.read(buf);
+                strbuf = strbuf.trim();
                 if(len == -1) {
                     break;
                 }
@@ -46,8 +47,6 @@ public class Client {
             }
             String kak;
             kak = sc.nextLine();
-            System.out.println(kak);
-            kak = kak.trim();
 
             os.write(kak.getBytes());
             os.flush();
